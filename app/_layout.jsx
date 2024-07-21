@@ -3,7 +3,6 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import GlobalProvider from "../context/GlobalProvider";
 
-// Prevent SplashScreen from hiding automatically
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
@@ -31,7 +30,7 @@ const RootLayout = () => {
   }, [fontsLoaded, error]);
 
   if (!fontsLoaded) {
-    return null; // Optionally render a loading screen or spinner here
+    return null;
   }
 
   return (
